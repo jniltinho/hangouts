@@ -33,6 +33,7 @@ use strict;
 use Net::SMTP;
 use Getopt::Std;
 
+my $server_name =   'Nagios LinuxPro';
 my $mailhost	=	'nagios.linuxpro.com.br';
 my $maildomain	=	'nagios.linuxpro.com.br';
 my $mailfrom	=	'"Nagios LinuxPro" <nagios@linuxpro.com.br>';
@@ -119,7 +120,7 @@ $mailto		=	"$opt_e";
 
 
 $mailbody = <<_END_;
-***** Nagios DigitalOcean *****
+***** $server_name *****
 
 Notification Type: $opt_n
 Host: $opt_h
